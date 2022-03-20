@@ -1,0 +1,60 @@
+body
+{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	font-family:  'Spline Sans', sans-serif;;
+	background-color: black;
+}
+.container
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	display: inline-flex;
+	filter: brightness(100%);
+	overflow: hidden;
+}
+.txt
+{
+	color: white;
+	background-color: black;
+	font-size: 200px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.txt:before
+{
+	content: 'sunset';
+	position: absolute;
+	mix-blend-mode: difference;
+	filter: blur(2px);
+}
+.txt_gradient
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	mix-blend-mode: multiply;
+	background: linear-gradient(114deg,rgba(73,155,234,1)4.9%,rgba(255,93,177,1)97.8%);
+}
+.txt_dodge
+{
+	position: absolute;
+	top: -100%;
+	left: -100%;
+	right: 0;
+	bottom: 0;
+	mix-blend-mode: color-dodge;
+	background: radial-gradient(circle,white,black 35%)center/25% 25%;
+	animation: neon 3s linear infinite;
+}
+@keyframes neon
+{
+	to{
+		transform: translate(50%, 50%);
+	}
+}
